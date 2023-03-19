@@ -1,4 +1,4 @@
-apt install unzip wget
+apt install -y unzip wget
 cd  ~
 wget  https://raw.githubusercontent.com/2dust/AndroidLibV2rayLite/master/ubuntu-cli-install-android-sdk.sh
 
@@ -25,3 +25,9 @@ git clone https://github.com/hiddify/AndroidLibXrayLite && cd AndroidLibXrayLite
 gomobile init
 go mod tidy -v
 gomobile bind -v -androidapi 19 -ldflags='-s -w' ./
+
+
+apt install -y nginx
+
+cp libv2ray.aar /var/www/html/
+cp libv2ray-sources.jar /var/www/html/
