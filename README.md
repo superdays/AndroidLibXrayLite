@@ -6,6 +6,7 @@
 * Go
 * gomobile
 
+test
 ## Build instructions
 1. `git clone [repo] && cd AndroidLibXrayLite`
 2. `go get -v -d`
