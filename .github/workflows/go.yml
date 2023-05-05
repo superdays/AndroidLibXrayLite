@@ -12,8 +12,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-
-
 jobs:
 
   build:
@@ -53,23 +51,11 @@ jobs:
           gomobile init
           go mod tidy -v
           gomobile bind -v -androidapi 19 -ldflags='-s -w' ./
-        
           
-#       - uses: actions/cache@v3
-#         with:
-#           path: |
-#             ~/.cache/go-build
-#             ~/go/pkg/mod
-#           key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
-#           restore-keys: |
-#             ${{ runner.os }}-go-
-
-  
-    - name: Upload Alpha
+      - name: Upload Alpha
         uses: softprops/action-gh-release@v1
-        if: ${{  success() }}
+        if: ${{ success() }}
         with:
-          # tag: ${{ github.ref_name }}
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
           files: libv2ray*r
