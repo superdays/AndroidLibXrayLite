@@ -8,4 +8,4 @@ require (
 	golang.org/x/sys v0.7.0
 )
 
-replace github.com/xtls/xray-core => github.com/hiddify/hiddify-xray-core v1.8.1.4
+replace github.com/xtls/xray-core => github.com/hiddify/hiddify-xray-core v1.8.1.5
